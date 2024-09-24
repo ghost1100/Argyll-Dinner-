@@ -1,0 +1,106 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+/* */
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #0652f7;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/* Change the color of links on hover including logo*/
+.topnav a:hover {
+  background-color: rgb(99, 2, 2);
+  color: black;
+}
+
+body {
+  background-color: black;
+}
+
+p {
+  color: aliceblue;
+}
+
+.owner {
+  padding-top: 20px;
+  padding: left 20px;
+  padding: bottom 10px;
+}
+
+
+
+
+
+/*list of the statements*/
+.words {
+  padding-left: 20%;
+}
+
+#stat1 {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+#stat2 {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+#stat3 {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+#stat4 {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+#stat5 {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+#Lstat {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+/*end of list*/
+
+
+
+
+/*booking page */
+h5{
+color: aliceblue;
+}
+
+@media screen and (max-width: 1000px){
+
+
+img{
+ width:80%;
+ height:auto;
+ margin:10%;
+ margin-top:0%;
+ margin-bottom:5%;
+}
+
+iframe{
+  padding:left 20%;
+  float: left;
+  width: fit-content;
+}
+
+p{
+  font-size: larger;
+}
+}

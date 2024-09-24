@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Argyll Diner</title>
+  <link rel="stylesheet" href="css.css" />
+  <link rel="icon" href="favicon.ico" />
+
+
+  <style>
+
+/*pop up bit*/
+
+/*end of pop up bit*/
+    .p {
+      color: aliceblue;
+    
+    }
+/* helps to place the content correctly */
+    .content {
+      width: 15rem;
+      height: 20rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin: 1em;
+      padding: 1em;
+    }
+
+    /* helps to place the form in the middle of the page */
+    body {
+      width: 500px;
+      margin: 0 auto;
+      padding: 50px;
+    }
+
+    label {
+      color: rgb(255, 252, 252);
+    }
+
+    /* makes a little space between the forms bits  */
+    div.elem-group {
+      margin: 20px 0;
+    }
+
+    /* makes sure that the form is aligned and placed correctly  */
+    div.elem-group.inlined {
+      width: 49%;
+      float: left;
+      margin-left: 1%;
+    }
+
+    label {
+      display: block;
+      font-family: "Nanum Gothic";
+      padding-bottom: 10px;
+      font-size: 1.25em;
+    }
+
+    input,
+    select,
+    textarea {
+      border-radius: 2px;
+      border: 2px solid #777;
+      box-sizing: border-box;
+      font-size: 1.25em;
+      font-family: "Nanum Gothic";
+      width: 100%;
+      padding: 10px;
+    }
+
+    div.elem-group.inlined input {
+      width: 95%;
+      display: inline-block;
+    }
+
+    textarea {
+      height: 250px;
+    }
+
+    hr {
+      border: 1px dotted #ccc;
+    }
+
+    button {
+      height: 50px;
+      background: orange;
+      border: none;
+      color: white;
+      font-size: 1.25em;
+      font-family: "Nanum Gothic";
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      border: 2px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <!--navigation bar-->
+  <div class="topnav">
+    <a href="splash.html"><img src="logo.png" /></a>
+  </div>
+  <nav>
+    <div class="topnav">
+      <a href="home.html">Home</a>
+      <a href="account.html">Account</a>
+      <a href="locations.html">Locations</a>
+      <a href="menu.html">Menu</a>
+      <a href="booking.html">Booking</a>
+      <a href="photography.html">Photography</a>
+    </div>
+  </nav>
+  <!--the form for booking -->
+  <form id="myform">
+    <div class="elem-group">
+      <!--asks for first name-->
+      <label for="name">Your Fore-Name</label>
+      <!--makes it a requirment that you have to fill this in, pattern is used to check validity-->
+      <input type="text" id="Fore-name" name="visitor's fore_name" pattern="[A-Za-z ]{1,32}" placeholder="First Name"
+        required />
+    </div><!--note to self here it is try again -->
+    <!--asks for surname-->
+    <div class="elem-group">
+      <label for="name">Your
+        Sur-Name</label><!--makes it a requirment that you have to fill this in, pattern is used to check validity-->
+      <input type="text" id="Sur-name" name="visitor's sur_name" pattern="[A-Za-z ]{1,32}" placeholder="Last Name"
+        required />
+    </div>
+    <!--asks for email-->
+    <div class="elem-group">
+      <label for="email">Your
+        E-mail</label><!--makes it a requirment that you have to fill this in, pattern is used to check validity-->
+      <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+        placeholder="micheal1917jackson@gamil.com" required />
+
+    </div>
+    <!--asks for your phone number-->
+    <div class="elem-group">
+      <label for="phone">Your
+        Phone</label><!--makes it a requirment that you have to fill this in, pattern is used to check validity-->
+      <input type="tel" id="phone" name="visitor_phone" placeholder="0715546556545" required />
+    </div>
+    <hr />
+    <!--asks how many adults arer coming-->
+    <div class="elem-group inlined">
+      <label
+        for="adult">Adults</label><!--makes it a requirment that you have to fill this in, and makes the requirment 1-->
+      <input type="number" id="adult" name="total_adults" placeholder="2" min="1" max="20" required />
+    </div>
+    <!--asks how many kids are coming-->
+    <div class="elem-group inlined">
+      <label for="child">Children</label><!--makes it a requirment that you have to fill this in,-->
+      <input type="number" id="child" name="total_children" placeholder="1" max="20" />
+    </div>
+    <!--asks for chceckin date-->
+    <div class="elem-group inlined">
+      <label for="checkin-date">Check-in Date</label><!--makes it a requirment that you have to fill this in, -->
+      <input type="date" id="checkin-date" name="checkin" required />
+    </div>
+    <!--asks for checkin time-->
+    <div class="elem-group inlined">
+      <label for="checkin-time">check-in time</label><!--makes it a requirment that you have to fill this in, -->
+      <input type="time" id="check-intime" name="check-in" required />
+    </div>
+
+    <!--asks about the table selection and gives you options-->
+    <div class="elem-group">
+      <select id="table-selection" name="table_preference" required>
+        <option value="">Choose a table prefrance from the List</option>
+        <option value="connecting">Connecting</option>
+        <option value="adjacent">Adjacent</option>
+        <option value="window">window</option>
+        <!--the options you can sit on topfloor,next to a window,adjacent of another table. -->
+        <option value="top floor">top floor</option>
+      </select>
+    </div>
+    <hr />
+    <!--asks if you need anything else or to rate our site-->
+    <div class="elem-group">
+      <label for="message">Anything Else?</label>
+      <textarea id="message" name="visitor_message"
+        placeholder="Tell us anything else that might be important to you such as alargies, required servings or you can rate our website ;)"></textarea>
+    </div>
+  
+    <button id="submitbtn" value="Click" onclick="Start()">Book and reserve 1 parking spot</button>
+    <!--its inside the form to help validate the forms input-->
+  </form>
+  <br>
+
+  <hr>
+  <p id="displaylocal"></p>
+  
+      <script>
+        //making a list of constant patterns so it checks everything before confirming your submission
+        //note to self remember to link it with the other 2 functions at the end such as jarvis()and destroy() scratch that a been up here since 12am its 3am in the nextday now without breaks istg if i fail after all this.
+        //i wont have a pattern for the number its too annoying trying to find the right pattern supported by all browsers and works with all numbers
+        function Start() {
+          // Get the form field values
+          forename = document.getElementById("Fore-name").value;
+          email = document.getElementById("email").value;
+          child = document.getElementById("child").value;
+          adult = document.getElementById("adult").value;
+          phone = document.getElementById("phone").value;
+          surname = document.getElementById("Sur-name").value;
+          date = document.getElementById("checkin-date").value;
+          time = document.getElementById("check-intime").value;
+          table = document.getElementById("table-selection").value;
+          message = document.getElementById("message").value;
+
+          localStorage.setItem('fore-Name', forename);
+          localStorage.setItem('sur-name', surname);
+          localStorage.setItem('email', email);
+          localStorage.setItem('phone', phone);
+          localStorage.setItem('adults', adult);
+          localStorage.setItem('children', child);
+          localStorage.setItem('Date', date);
+          localStorage.setItem('time', time);
+          localStorage.setItem('table-prefrance', table);
+          localStorage.setItem('message', message);
+          
+//EVENT HANDLER SET TO STOP THE FORM FROM REFRESHIG THE page
+getElementById="myform".value
+        event.preventDefault();
+        const emailPattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+  const forenamePattern = /^[A-Za-z]{1,32}$/;
+  const surnamePattern = /^[A-Za-z]{1,32}$/;
+  const phonePattern = /^\d{10}$/;
+  if(!emailPattern){
+alert("please fill in required fields as shown")
+  }
+  if(!phonePattern){
+alert("please fill in required fields as shown")
+  }
+  if(!surnamePattern){
+alert("please fill in required fields as shown")
+  }
+        
+        if(!forename||!email||!phone){
+          //made to avoid errors
+        }
+        else{
+          display();
+        }
+        }
+        
+
+       function display() {
+        let firstname = localStorage.getItem('fore-Name');
+        messageShow = ("congrat's your Booking has been confirmed " + firstname);
+        document.getElementById("displaylocal").innerHTML = messageShow;
+       }
+
+
+
+
+        //this code is here to verify the current time and date and make them unselectable for the user so that you cant book a past day
+        var currentDateTime = new Date();
+        var year = currentDateTime.getFullYear();
+        var month = currentDateTime.getMonth() + 1;
+        var date = currentDateTime.getDate() + 1;
+        //if the date is more than 10 it removes it or makes it invisible so you cant book a past date
+        if (date < 10) {
+          date = "0" + date;
+        }//if the month is more than 10 it removes it or makes it invisible so you cant book a past month
+        if (month < 10) {
+          month = "0" + month;
+        }
+
+        var dateTomorrow = year + "-" + month + "-" + date;
+        var checkinElem = document.querySelector("#checkin-date");
+
+        checkinElem.setAttribute("min", dateTomorrow);
+
+        checkinElem.onchange = function () {
+          checkoutElem.setAttribute("min", this.value);
+        };
+
+        
+      </script>
+</body>
+
+</html>

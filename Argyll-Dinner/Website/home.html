@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Argyll Diner</title>
+  <link rel="stylesheet" href="css.css" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    @keyframes slide {
+      from {
+        /* skey frames used to make the sliders move */
+        transform: translateX(0);
+
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    td {
+      padding: 0%;
+      margin: 0%;
+    }
+
+    .cell {
+      height: 50%;
+      width: 50%;
+    }
+
+    .container {
+      height: 50%;
+      width: 50%;
+      animation: slide 20s linear infinite;
+    }
+
+    @media only screen and (max-width: 844px) {
+      .cell {
+        height: 20%;
+        width: 100%;
+      }
+
+      .container {
+        height: 50%;
+        width: 50%;
+        animation: slide 20s linear infinite;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--this is the home page with the navigation bar and logo at the top-->
+  <div class="topnav">
+    <a href="splash.html"><img src="logo.png" /></a>
+  </div>
+  <nav>
+    <div class="topnav">
+      <a href="home.html">Home</a>
+      <a href="account.html">Account</a>
+      <a href="locations.html">Locations</a>
+      <a href="menu.html">Menu</a>
+      <a href="booking.html">Booking</a>
+      <a href="photography.html">Photography</a>
+    </div>
+  </nav>
+  <hr>
+  <!--this is the code for the big image at the top of the site -->
+  <table class="container">
+    <tr>
+      <td class="cell"><img src="dinerbackground.png" alt="Image 1"></td>
+      <td class="cell"><img src="backit.png" alt="Image 2"></td>
+      <td class="cell"><img src="backing.png" alt="Image 3"></td>
+      <td class="cell"><img src="back.png" alt="Image 4"></td>
+    </tr>
+  </table>
+  <hr>
+  <div class="img-grid">
+    <img src="logo.png" />
+    <div class="owner">
+      <img src="Jakeheart.png" heigh="10%" width="30%">
+    </div>
+  </div>
+
+  <div>
+    <p class="ight">-a few words from the owner-</p>
+    <p id="stat1">
+      "Wealth consists not in having great possessions, but in having fewer
+      wants."<br />-EPICTETUS
+    </p>
+    <p id="stat2">
+      my father loved quoting philosiphers but that didn't make a
+      differance<br />
+      I enjoyed listening to him quote them then follow up by explaining them
+    </p>
+    <p id="stat3">
+      and that played a massive part in my life helped me gain an
+      understanding of the world that you migh call rare
+    </p>
+    <p id="stat4">
+      and it taught me to learn that life is meaningless!! only humans who
+      have all they can ask for care for meaning
+    </p>
+    <p id="stat5">
+      and that made me want to achive my dream of having an american style
+      resturant chains all over the world.<br />
+      and so here you are here I am <br />
+      come and dine with us!!
+    </p>
+    <p id="Lstat">-Jake Heart</p>
+  </div>
+  <hr>
+  <div class="ending">
+    <footer>
+      <p> </p>
+      <p><a href="locations.html">contact us</a></p>
+      <p><Social-Media:facebook>@argyll-diner</Social-Media:facebook></p>
+    </footer>
+  </div>
+</body>
+
+</html>
